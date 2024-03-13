@@ -35,7 +35,7 @@ def get_asset(*args, dtype=None):
 # 
 # The following functions are taken from
 # https://github.com/pytorch/vision/blob/cd0268cd408d19d91f870e36fdffd031085abe13/torchvision/datasets/utils.py
-
+"""
 from torchvision.datasets.utils import _get_confirm_token, _save_response_content
 
 def _quota_exceeded(response: "requests.models.Response"):
@@ -45,14 +45,14 @@ def _quota_exceeded(response: "requests.models.Response"):
 
 
 def download_file_from_google_drive(file_id, root, filename=None, md5=None):
-    """Download a Google Drive file from  and place it in root.
+    Download a Google Drive file from  and place it in root.
 
     Args:
         file_id (str): id of file to be downloaded
         root (str): Directory to place downloaded file in
         filename (str, optional): Name to save the file under. If None, use the id of the file.
         md5 (str, optional): MD5 checksum of the download. If None, do not check
-    """
+    
     # Based on https://stackoverflow.com/questions/38511444/python-download-files-from-google-drive-using-url
     import requests
     url = "https://docs.google.com/uc?export=download"
@@ -85,3 +85,4 @@ def download_file_from_google_drive(file_id, root, filename=None, md5=None):
             raise RuntimeError(msg)
 
         _save_response_content(response, fpath)
+"""
